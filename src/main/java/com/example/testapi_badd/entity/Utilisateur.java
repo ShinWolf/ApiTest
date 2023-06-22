@@ -22,6 +22,8 @@ public class Utilisateur {
 
     private String nom;
 
+    private String password;
+
     private String prenom;
 
     private String codePostal;

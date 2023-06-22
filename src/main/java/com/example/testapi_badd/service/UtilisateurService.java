@@ -3,13 +3,14 @@ package com.example.testapi_badd.service;
 import com.example.testapi_badd.entity.Utilisateur;
 import com.example.testapi_badd.repository.UtilisateurRepository;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.NoSuchElementException;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class UtilisateurService {
 
     private final UtilisateurRepository utilisateurRepository;
@@ -17,7 +18,7 @@ public class UtilisateurService {
         return utilisateurRepository.save(utilisateur);
     }
 
-    public List<Utilisateur> listeUtilisateur(){
+    public List<Utilisateur> listUtilisateurs(){
         return utilisateurRepository.findAll();
     }
 

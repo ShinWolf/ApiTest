@@ -17,21 +17,13 @@ public class UtilisateurController {
     private final RoleService roleService;
 
     @PostMapping(path = "/create")
-    public Utilisateur creation() {
-//        System.out.println("sdfdsfsdfsdfsdfsdfsd " + utilisateur);
-        Utilisateur u = new Utilisateur();
-        u.setPrenom("Test");
-        u.setNom("Test");
-        u.setPseudo("TestTest");
-        u.setCodePostal("62110");
-        u.setEmail("test@gmail.com");
-        u.setRole(roleService.recupRole("Admin"));
-        return utilisateurService.creationUtilisateur(u);
+    public Utilisateur creation(@RequestBody Utilisateur utilisateur) {
+        return utilisateurService.creationUtilisateur(utilisateur);
     }
 
     @GetMapping(path = "/listUser")
     public List<Utilisateur> utilisateurs() {
-        return utilisateurService.listeUtilisateur();
+        return utilisateurService.listUtilisateurs();
     }
 
     @PutMapping(path = "/update/{id}")
