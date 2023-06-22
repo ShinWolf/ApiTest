@@ -20,6 +20,4 @@ public class Role {
 
     private String libelle;
 
-    @OneToMany(mappedBy = "role")
-    private List<Utilisateur> utilisateurs;
 }

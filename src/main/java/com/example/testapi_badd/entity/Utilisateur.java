@@ -26,6 +26,7 @@ public class Utilisateur {
 
     private String prenom;
 
+    @Column(name = "code_postal")
     private String codePostal;
 
     @ManyToOne
