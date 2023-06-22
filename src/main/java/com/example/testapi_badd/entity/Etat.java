@@ -23,12 +23,6 @@ public class Etat {
     @Column(name = "libelle")
     private String libelle;
 
-    @Column(name = "date_debut")
-    private LocalDateTime dateDebut;
-
-    @Column(name = "date_fin")
-    private LocalDateTime dateFin;
-
-    @OneToMany(mappedBy = "etat")
-    private List<Plante> plantes;
+//    @OneToMany(mappedBy = "etat")
+//    private List<Plante> plantes;
 }

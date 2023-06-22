@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "plante")
 @Getter
@@ -30,4 +32,8 @@ public class Plante {
     @ManyToOne
     @JoinColumn(name = "etat_id")
     private Etat etat;
+
+//    @OneToMany(mappedBy = "plante")
+//    private List<Post> posts;
+
 }

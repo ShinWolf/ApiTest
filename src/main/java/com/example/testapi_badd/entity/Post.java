@@ -31,10 +31,12 @@ public class Post {
     private Utilisateur utilisateur;
 
     @OneToMany(mappedBy = "post")
-    @Column(name = "hashtag")
     private List<Hashtag> hashtags;
 
     @OneToMany(mappedBy = "post")
-    @Column(name = "commentaire")
     private List<Commentaire> commentaires;
+
+    @ManyToOne
+    @JoinColumn(name = "plante_id")
+    private Plante plante;
 }
