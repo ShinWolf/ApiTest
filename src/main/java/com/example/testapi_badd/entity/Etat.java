@@ -17,12 +17,16 @@ public class Etat {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
+    @Column(name = "libelle")
     private String libelle;
 
+    @Column(name = "date_debut")
     private LocalDateTime dateDebut;
 
+    @Column(name = "date_fin")
     private LocalDateTime dateFin;
 
     @OneToMany(mappedBy = "etat")

@@ -14,8 +14,10 @@ public class Hashtag {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
+    @Column(name = "libelle")
     private String libelle;
 
     @ManyToOne

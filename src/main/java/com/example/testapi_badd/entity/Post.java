@@ -17,10 +17,13 @@ public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
+    @Column(name = "date_post")
     private LocalDateTime datePost;
 
+    @Column(name = "texte")
     private String texte;
 
     @ManyToOne
@@ -28,8 +31,10 @@ public class Post {
     private Utilisateur utilisateur;
 
     @OneToMany(mappedBy = "post")
+    @Column(name = "hashtag")
     private List<Hashtag> hashtags;
 
     @OneToMany(mappedBy = "post")
+    @Column(name = "commentaire")
     private List<Commentaire> commentaires;
 }

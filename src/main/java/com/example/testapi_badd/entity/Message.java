@@ -16,6 +16,7 @@ public class Message {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
     @ManyToOne
@@ -26,7 +27,9 @@ public class Message {
     @JoinColumn(name = "utilisateur_destinataire_id")
     private Utilisateur destinataire;
 
+    @Column(name = "contenu")
     private String contenu;
 
+    @Column(name = "date_message")
     private LocalDateTime dateMessage;
 }

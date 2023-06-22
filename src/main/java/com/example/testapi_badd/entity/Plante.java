@@ -14,10 +14,13 @@ public class Plante {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
+    @Column(name = "photo")
     private String photo;
 
+    @Column(name = "description")
     private String description;
 
     @ManyToOne

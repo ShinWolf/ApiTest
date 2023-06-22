@@ -16,10 +16,13 @@ public class Commentaire {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
+    @Column(name = "contenu")
     private String contenue;
 
+    @Column(name = "date_commentaire")
     private LocalDateTime dateCommentaire;
 
     @ManyToOne
