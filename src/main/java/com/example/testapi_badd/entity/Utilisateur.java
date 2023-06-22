@@ -14,18 +14,25 @@ public class Utilisateur {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
+    @Column(name = "pseudo")
     private String pseudo;
 
+    @Column(name = "email")
     private String email;
 
+    @Column(name = "nom")
     private String nom;
 
+    @Column(name = "password")
     private String password;
 
+    @Column(name = "prenom")
     private String prenom;
 
+    @Column(name = "code_postal")
     private String codePostal;
 
     @ManyToOne
